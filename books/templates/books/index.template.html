@@ -13,5 +13,22 @@
     <p>
         Here you can see all the books that we have.
     </p>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Book Title</td>
+                <td>ISBN</td>
+                <td>Description</td>
+            </tr>
+        </thead>
+        {% for book in books %}
+        <tr>
+            <td width="300">{{ book.title }}</td>
+            <td>{{ book.ISBN }}</td>
+            <td>{{ book.desc }}</td>
+        </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>
