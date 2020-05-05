@@ -11,12 +11,14 @@
 <body>
     <h1>Authors</h1>
     <p>
-        Here are the authors of the books we have:
+        Here are all the authors of the books we have:
     </p>
-    <ul>
         {% for author in authors %}
-        <li>{{ author.first_name }} {{ author.last_name }}</li>
+        <ul>
+            <li>{{ author.first_name }} {{ author.last_name }} | <a href="{% url 'update_author_route' author_id=author.id %}">Edit</a> | <a href="{% url 'delete_author_route' author_id=author.id %}">Delete</a></li>
+            <li>{{ author.dob }}</li>
+        </ul>
         {% endfor %}
-    </ul>
+ 
 </body>
 </html>

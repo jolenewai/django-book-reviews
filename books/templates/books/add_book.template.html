@@ -11,9 +11,7 @@
     <div class="container justify-content-center">
     <h1 class="my-3">Add A Book</h1>
     <form method="POST">
-        {% csrf_token %}
-        {{ book_form.as_p}}
-        <input type="submit" value="Add Book" />
+        {% include 'books/forms.template.html' %}
     </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
